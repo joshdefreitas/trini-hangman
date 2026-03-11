@@ -522,24 +522,201 @@ export default function TriniHangman() {
         style={{
           width: "100%",
           maxWidth: 520,
-          paddingTop: 24,
+          paddingTop: 20,
           marginBottom: 8,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        <div
+        {/* Logo — clickable from anywhere, goes home */}
+        <button
+          onClick={() => setMode("menu")}
           style={{
-            fontSize: 28,
-            fontWeight: 900,
-            letterSpacing: 2,
-            color: "#FF2400",
-            textShadow: "0 0 20px rgba(255,36,0,0.5),2px 2px 0 #000",
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: mode === "menu" ? "default" : "pointer",
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            textDecoration: "none",
           }}
         >
-          🇹🇹 TRINI HANGMAN
-        </div>
+          {/* SVG Logo inline — no external file needed */}
+          <svg
+            viewBox="0 0 64 64"
+            width="48"
+            height="48"
+            style={{
+              flexShrink: 0,
+              filter:
+                mode !== "menu"
+                  ? "drop-shadow(0 0 6px rgba(255,36,0,0.5))"
+                  : "none",
+              transition: "filter 0.2s",
+            }}
+          >
+            {/* Background circle */}
+            <circle cx="32" cy="32" r="31" fill="#140300" />
+            {/* Gold ring */}
+            <circle
+              cx="32"
+              cy="32"
+              r="29.5"
+              fill="none"
+              stroke="#c8843a"
+              strokeWidth="2.2"
+            />
+            <circle
+              cx="32"
+              cy="32"
+              r="27"
+              fill="none"
+              stroke="rgba(200,132,58,0.3)"
+              strokeWidth="1"
+            />
+            {/* Gallows */}
+            <line
+              x1="8"
+              y1="50"
+              x2="56"
+              y2="50"
+              stroke="#c8843a"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="15"
+              y1="50"
+              x2="15"
+              y2="9"
+              stroke="#c8843a"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="14"
+              y1="9"
+              x2="40"
+              y2="9"
+              stroke="#c8843a"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="40"
+              y1="9"
+              x2="40"
+              y2="16"
+              stroke="#c8843a"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="15"
+              y1="19"
+              x2="24"
+              y2="9"
+              stroke="#c8843a"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              strokeOpacity="0.7"
+            />
+            {/* Stickman */}
+            <circle
+              cx="40"
+              cy="21"
+              r="5"
+              fill="#140300"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+            />
+            <line
+              x1="40"
+              y1="26"
+              x2="40"
+              y2="39"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="40"
+              y1="31"
+              x2="33"
+              y2="36"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="40"
+              y1="31"
+              x2="47"
+              y2="36"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="40"
+              y1="39"
+              x2="35"
+              y2="47"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="40"
+              y1="39"
+              x2="45"
+              y2="47"
+              stroke="#FF2400"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+            />
+            {/* TT flag dots */}
+            <circle cx="27" cy="56" r="1.5" fill="#FF2400" />
+            <circle cx="32" cy="56" r="1.5" fill="#cccccc" />
+            <circle cx="37" cy="56" r="1.5" fill="#111111" />
+          </svg>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              lineHeight: 1.1,
+            }}
+          >
+            <span
+              style={{
+                fontSize: 18,
+                fontWeight: 900,
+                letterSpacing: 2,
+                color: "#FF2400",
+                textShadow:
+                  mode !== "menu" ? "0 0 14px rgba(255,36,0,0.45)" : "none",
+                transition: "text-shadow 0.2s",
+              }}
+            >
+              TRINI
+            </span>
+            <span
+              style={{
+                fontSize: 18,
+                fontWeight: 900,
+                letterSpacing: 2,
+                color: "#FFD700",
+                textShadow:
+                  mode !== "menu" ? "0 0 14px rgba(255,210,0,0.35)" : "none",
+                transition: "text-shadow 0.2s",
+              }}
+            >
+              HANGMAN
+            </span>
+          </div>
+        </button>
         <button
           onClick={() => setMode("stats")}
           style={{
