@@ -2,15 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trini Hangman</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Tab title & description -->
+    <title>Trini Hangman 🇹🇹</title>
     <meta
       name="description"
       content="The ultimate Trinidad & Tobago word guessing game"
     />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+    <!-- Colours the Android browser bar and iOS status bar to match the app -->
+    <meta name="theme-color" content="#0d0600" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Kill the white border at the root level before React even paints -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #root {
+        width: 100%;
+        min-height: 100%;
+        min-height: 100dvh;
+        background: #0d0600;
+        overscroll-behavior: none;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
   </head>
-  <body>
+  <body style="margin: 0; padding: 0; background: #0d0600">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
