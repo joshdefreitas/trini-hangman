@@ -645,6 +645,14 @@ const WORDS = [
   },
 
   {
+    word: "BLAG",
+    hint: "Trini Slang",
+    emoji: "🎭",
+    sentence:
+      "He try to ___ his way into the VIP section but the bouncer see through him quick.",
+  },
+
+  {
     word: "BOOF",
     hint: "Trini Slang",
     emoji: "😵",
@@ -653,7 +661,7 @@ const WORDS = [
   },
 
   {
-    word: "FASS",
+    word: "FARSE",
     hint: "Trini Slang",
     emoji: "🫣",
     sentence:
@@ -666,6 +674,14 @@ const WORDS = [
     emoji: "🐀",
     sentence:
       "They find a ___ living under the house and set a trap to catch it.",
+  },
+
+  {
+    word: "MAUVAISE",
+    hint: "Trini Slang",
+    emoji: "😠",
+    sentence:
+      "She in a real ___ mood today — doh bother talk to she about anything right now.",
   },
 
   // ── Carnival ───────────────────────────────────────────────────────────────
@@ -1218,6 +1234,14 @@ const WORDS = [
   },
 
   {
+    word: "HOSAY",
+    hint: "Cultural Event",
+    emoji: "🕌",
+    sentence:
+      "The ___ festival in St James draws huge crowds every year to watch the tadjahs and moons.",
+  },
+
+  {
     word: "DIVALI",
     hint: "Cultural Event",
     emoji: "🪔",
@@ -1347,6 +1371,38 @@ const WORDS = [
       "___ ___ was one of the greatest footballers Trinidad ever produced and played for Manchester United.",
   },
 
+  {
+    word: "ANGELA BASSETT",
+    hint: "Trini Legend",
+    emoji: "🎬",
+    sentence:
+      "___ ___ has Trinidadian roots and is one of the most celebrated actresses in Hollywood.",
+  },
+
+  {
+    word: "EARL LOVELACE",
+    hint: "Trini Legend",
+    emoji: "📚",
+    sentence:
+      "___ ___ is a celebrated Trinidadian novelist best known for The Dragon Can't Dance.",
+  },
+
+  {
+    word: "CLR JAMES",
+    hint: "Trini Legend",
+    emoji: "✊",
+    sentence:
+      "___ ___ was a Trinidadian intellectual, historian and cricket writer of world renown.",
+  },
+
+  {
+    word: "CAZABON",
+    hint: "Trini Legend",
+    emoji: "🎨",
+    sentence:
+      "___ was a famous 19th century Trinidadian painter celebrated for his landscapes of the island.",
+  },
+
   // ── More Music Genres ──────────────────────────────────────────────────────
   {
     word: "STEEL BAND",
@@ -1364,7 +1420,38 @@ const WORDS = [
       "The ___ competition requires calypsonians to make up lyrics on the spot without any preparation.",
   },
 
+  {
+    word: "PICHAKAREE",
+    hint: "Music Genre",
+    emoji: "🎶",
+    sentence:
+      "The ___ singing at the Phagwa celebration was beautiful and lifted everybody spirit.",
+  },
+
+  {
+    word: "LAVWAY",
+    hint: "Music Genre",
+    emoji: "🎵",
+    sentence:
+      "The crowd joined in on the ___ chorus as the band passed slowly through the street.",
+  },
+
+  {
+    word: "ORISHA",
+    hint: "Music Genre",
+    emoji: "🥁",
+    sentence:
+      "The ___ drumming at the ceremony was hypnotic and went on well past midnight.",
+  },
+
   // ── More Calypso and Soca Artists ─────────────────────────────────────────
+  {
+    word: "SINGING SANDRA",
+    hint: "Calypso Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ was one of the most powerful female calypsonians Trinidad ever produced.",
+  },
 
   {
     word: "DAVID RUDDER",
@@ -1372,6 +1459,14 @@ const WORDS = [
     emoji: "🎤",
     sentence:
       "___ ___ is a legendary Trinidadian musician known for the iconic song Haiti.",
+  },
+
+  {
+    word: "CYNTHIA MORGAN",
+    hint: "Calypso Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ was a pioneering female calypsonian who broke barriers in the art form.",
   },
 
   {
@@ -1758,11 +1853,19 @@ const WORDS = [
   },
 
   {
-    word: "BUCK",
+    word: "BACCOO",
     hint: "Trini Slang",
     emoji: "👺",
     sentence:
       "She say somebody must have a ___ working for them because everything always going their way.",
+  },
+
+  {
+    word: "OLE MASK",
+    hint: "Trini Slang",
+    emoji: "🎭",
+    sentence:
+      "Stop playing ___ ___ — everybody already know the truth about what you did.",
   },
 
   {
@@ -2140,6 +2243,60 @@ export default function TriniHangman() {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [guess, mode]);
+
+  // ── Daily share — builds a spoiler-free emoji result card ─────────────
+  const generateShareText = useCallback(() => {
+    if (!wordObj || mode !== "daily") return "";
+    const today = new Date();
+    const dayNum = Math.floor((today - START_DATE) / (1000 * 60 * 60 * 24)) + 1;
+    const won = gameOver === "win";
+    const wrong = [...guessed].filter(
+      (l) => !wordObj.word.replace(/ /g, "").includes(l),
+    );
+    const correct = [...guessed].filter((l) =>
+      wordObj.word.replace(/ /g, "").includes(l),
+    );
+    // Build a row per wrong guess showing ❌, and a final row showing result
+    const wrongRows = wrong.map(() => "❌").join(" ");
+    const result = won
+      ? `🟩 ${wrong.length}/6 wrong guesses`
+      : `💀 Failed in 6`;
+    const lines = [
+      `🇹🇹 Trini Hangman — Day #${dayNum}`,
+      `${wordObj.emoji} ${wordObj.hint}`,
+      ``,
+      won
+        ? `${"🟩".repeat(correct.length > 0 ? 1 : 0)} Solved with ${wrong.length} wrong guess${wrong.length !== 1 ? "es" : ""}!`
+        : `💀 Could not get it today`,
+      wrong.length > 0
+        ? `Wrong letters: ${wrongRows}`
+        : `No wrong guesses — perfect!`,
+      ``,
+      `Play at trinihangman.com`,
+    ];
+    return lines.join("\n");
+  }, [wordObj, guessed, gameOver, mode]);
+
+  const [copied, setCopied] = useState(false);
+  const handleShare = useCallback(async () => {
+    const text = generateShareText();
+    if (!text) return;
+    try {
+      if (navigator.share) {
+        await navigator.share({ text });
+      } else {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      }
+    } catch {
+      try {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      } catch {}
+    }
+  }, [generateShareText]);
 
   const winRate =
     stats.played > 0 ? Math.round((stats.wins / stats.played) * 100) : 0;
@@ -2702,7 +2859,7 @@ export default function TriniHangman() {
                Each ___ maps 1-to-1 with one word of the answer, shown as a
                fixed-width blank underline — purely static, no live tile updates. */}
           {wordObj.sentence &&
-            wrongGuesses >= 4 &&
+            wrongGuesses >= 5 &&
             !gameOver &&
             (() => {
               const answerWords = wordObj.word.split(" "); // e.g. ["CRAB","AND","DUMPLING"]
@@ -2728,7 +2885,7 @@ export default function TriniHangman() {
                       marginBottom: 6,
                     }}
                   >
-                    🚨 SENTENCE HINT
+                    🚨 LAST CHANCE HINT
                   </div>
                   <div
                     style={{
@@ -2864,14 +3021,97 @@ export default function TriniHangman() {
                 </span>{" "}
                 {wordObj.emoji}
               </div>
+
+              {/* Daily share card */}
+              {mode === "daily" &&
+                (() => {
+                  const today = new Date();
+                  const dayNum =
+                    Math.floor((today - START_DATE) / (1000 * 60 * 60 * 24)) +
+                    1;
+                  const wrongList = [...guessed].filter(
+                    (l) => !wordObj.word.replace(/ /g, "").includes(l),
+                  );
+                  const squares = Array.from({ length: MAX_WRONG }, (_, i) => (
+                    <span key={i} style={{ fontSize: 20 }}>
+                      {i < wrongList.length
+                        ? "🟥"
+                        : gameOver === "win" && i === wrongList.length
+                          ? "🟩"
+                          : "⬛"}
+                    </span>
+                  ));
+                  return (
+                    <div
+                      style={{
+                        margin: "14px 0 4px",
+                        background: "rgba(0,0,0,0.25)",
+                        borderRadius: 10,
+                        padding: "12px 16px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          color: "rgba(255,220,180,0.5)",
+                          fontSize: 10,
+                          letterSpacing: 2,
+                          fontWeight: 700,
+                          marginBottom: 8,
+                        }}
+                      >
+                        DAY #{dayNum} RESULT
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: 4,
+                          marginBottom: 8,
+                        }}
+                      >
+                        {squares}
+                      </div>
+                      <div
+                        style={{ color: "rgba(255,220,180,0.7)", fontSize: 12 }}
+                      >
+                        {gameOver === "win"
+                          ? `Solved with ${wrongList.length} wrong guess${wrongList.length !== 1 ? "es" : ""}${wrongList.length === 0 ? " — perfect! 🌟" : ""}`
+                          : `Better luck tomorrow 😅`}
+                      </div>
+                    </div>
+                  );
+                })()}
+
               <div
                 style={{
                   display: "flex",
                   gap: 10,
                   justifyContent: "center",
                   marginTop: 16,
+                  flexWrap: "wrap",
                 }}
               >
+                {/* Share button — daily only */}
+                {mode === "daily" && (
+                  <button
+                    onClick={handleShare}
+                    style={{
+                      background: copied
+                        ? "rgba(0,180,80,0.25)"
+                        : "rgba(255,36,0,0.2)",
+                      border: `1px solid ${copied ? "#00B450" : "#FF2400"}`,
+                      color: copied ? "#00B450" : "#FF6040",
+                      padding: "8px 20px",
+                      borderRadius: 10,
+                      cursor: "pointer",
+                      fontSize: 13,
+                      fontWeight: 700,
+                      transition: "all 0.2s",
+                    }}
+                  >
+                    {copied ? "✅ Copied!" : "📤 Share Result"}
+                  </button>
+                )}
                 <button
                   onClick={() => startGame("random")}
                   style={{
@@ -2885,7 +3125,7 @@ export default function TriniHangman() {
                     fontWeight: 700,
                   }}
                 >
-                  🎲 New Word
+                  🎲 Random Word
                 </button>
                 <button
                   onClick={() => setMode("menu")}
