@@ -645,14 +645,6 @@ const WORDS = [
   },
 
   {
-    word: "BLAG",
-    hint: "Trini Slang",
-    emoji: "🎭",
-    sentence:
-      "He try to ___ his way into the VIP section but the bouncer see through him quick.",
-  },
-
-  {
     word: "BOOF",
     hint: "Trini Slang",
     emoji: "😵",
@@ -661,7 +653,7 @@ const WORDS = [
   },
 
   {
-    word: "FARSE",
+    word: "FASS",
     hint: "Trini Slang",
     emoji: "🫣",
     sentence:
@@ -674,14 +666,6 @@ const WORDS = [
     emoji: "🐀",
     sentence:
       "They find a ___ living under the house and set a trap to catch it.",
-  },
-
-  {
-    word: "MAUVAISE",
-    hint: "Trini Slang",
-    emoji: "😠",
-    sentence:
-      "She in a real ___ mood today — doh bother talk to she about anything right now.",
   },
 
   // ── Carnival ───────────────────────────────────────────────────────────────
@@ -1234,14 +1218,6 @@ const WORDS = [
   },
 
   {
-    word: "HOSAY",
-    hint: "Cultural Event",
-    emoji: "🕌",
-    sentence:
-      "The ___ festival in St James draws huge crowds every year to watch the tadjahs and moons.",
-  },
-
-  {
     word: "DIVALI",
     hint: "Cultural Event",
     emoji: "🪔",
@@ -1360,6 +1336,522 @@ const WORDS = [
     emoji: "🎤",
     sentence:
       "___ ___ was born in Trinidad before moving to New York and becoming a global rap superstar.",
+  },
+
+  // ── More Trini Legends ─────────────────────────────────────────────────────
+  {
+    word: "DWIGHT YORKE",
+    hint: "Trini Legend",
+    emoji: "⚽",
+    sentence:
+      "___ ___ was one of the greatest footballers Trinidad ever produced and played for Manchester United.",
+  },
+
+  // ── More Music Genres ──────────────────────────────────────────────────────
+  {
+    word: "STEEL BAND",
+    hint: "Music Genre",
+    emoji: "🥁",
+    sentence:
+      "Every Panorama season, the ___ ___ does practise late into the night in the pan yard.",
+  },
+
+  {
+    word: "EXTEMPO",
+    hint: "Music Genre",
+    emoji: "🎙️",
+    sentence:
+      "The ___ competition requires calypsonians to make up lyrics on the spot without any preparation.",
+  },
+
+  // ── More Calypso and Soca Artists ─────────────────────────────────────────
+
+  {
+    word: "DAVID RUDDER",
+    hint: "Calypso Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ is a legendary Trinidadian musician known for the iconic song Haiti.",
+  },
+
+  {
+    word: "PATRICE ROBERTS",
+    hint: "Soca Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ is one of the most consistent female Soca artists in the Caribbean.",
+  },
+
+  {
+    word: "KERWIN DU BOIS",
+    hint: "Soca Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ ___ is known for his smooth delivery and has won multiple Soca Monarch titles.",
+  },
+
+  {
+    word: "VOICE",
+    hint: "Soca Artist",
+    emoji: "🎤",
+    sentence:
+      "___ is a Trinidadian Soca artist known for his conscious and soulful storytelling style.",
+  },
+
+  {
+    word: "FARMER NAPPY",
+    hint: "Soca Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ became a household name with his feel-good road anthems every Carnival season.",
+  },
+
+  {
+    word: "NAILAH BLACKMAN",
+    hint: "Soca Artist",
+    emoji: "🎤",
+    sentence:
+      "___ ___ is a young Trinidadian Soca star and the granddaughter of Rikki Jai.",
+  },
+
+  // ── More Cultural Events ───────────────────────────────────────────────────
+  {
+    word: "PANORAMA",
+    hint: "Cultural Event",
+    emoji: "🥁",
+    sentence:
+      "Every Carnival season, the steel bands compete at ___ for the title of national champions.",
+  },
+
+  {
+    word: "DIMANCHE GRAS",
+    hint: "Cultural Event",
+    emoji: "🎭",
+    sentence:
+      "The ___ ___ show on Carnival Sunday night features the Calypso Monarch and King and Queen competition.",
+  },
+
+  {
+    word: "SOCA MONARCH",
+    hint: "Cultural Event",
+    emoji: "🎤",
+    sentence:
+      "Winning the ___ ___ title is one of the biggest honours a Soca artist can achieve in Trinidad.",
+  },
+
+  {
+    word: "CALYPSO TENT",
+    hint: "Cultural Event",
+    emoji: "🎶",
+    sentence:
+      "Every Carnival season he does go to the ___ ___ to hear the new songs before they hit the road.",
+  },
+
+  {
+    word: "INDEPENDENCE",
+    hint: "Cultural Event",
+    emoji: "🇹🇹",
+    sentence:
+      "___ Day on August 31st is celebrated with a parade and fireworks all across the country.",
+  },
+
+  {
+    word: "TOBAGO HERITAGE",
+    hint: "Cultural Event",
+    emoji: "🏝️",
+    sentence:
+      "The ___ ___ Festival showcases traditional Tobagonian culture, food and music every July.",
+  },
+
+  {
+    word: "PARANG FESTIVAL",
+    hint: "Cultural Event",
+    emoji: "🎸",
+    sentence:
+      "The ___ ___ in Lopinot draws big crowds every December to celebrate the Christmas tradition.",
+  },
+
+  {
+    word: "EASTER REGATTA",
+    hint: "Cultural Event",
+    emoji: "⛵",
+    sentence:
+      "The ___ ___ in Tobago is one of the oldest sailing races in the entire Caribbean.",
+  },
+
+  // ── More Cultural Items ────────────────────────────────────────────────────
+  {
+    word: "DEYA",
+    hint: "Cultural Item",
+    emoji: "🪔",
+    sentence:
+      "They light the small clay ___ and place it outside the house for Divali night.",
+  },
+
+  {
+    word: "CUTLASS",
+    hint: "Cultural Item",
+    emoji: "🔪",
+    sentence:
+      "He sharpen the ___ and head into the garden to cut back the overgrown bush.",
+  },
+
+  {
+    word: "PIROGUE",
+    hint: "Cultural Item",
+    emoji: "⛵",
+    sentence:
+      "The fisherman launch his ___ before sunrise to go and pull his nets in the gulf.",
+  },
+
+  {
+    word: "JUMBIES",
+    hint: "Cultural Item",
+    emoji: "👻",
+    sentence:
+      "Granny used to warn the children about ___ coming out at night if they misbehaved.",
+  },
+
+  {
+    word: "SOUCOUYANT",
+    hint: "Cultural Item",
+    emoji: "🔥",
+    sentence:
+      "She say she see a ___ turn into a ball of fire and fly over the rooftop in the dark.",
+  },
+
+  {
+    word: "LA DIABLESSE",
+    hint: "Cultural Item",
+    emoji: "👠",
+    sentence:
+      "The story say ___ ___ would lure men off the road at night with her one hidden cloven hoof.",
+  },
+
+  {
+    word: "LAGAHOO",
+    hint: "Cultural Item",
+    emoji: "🐺",
+    sentence:
+      "The old people in the village used to talk about seeing a ___ near the cemetery at midnight.",
+  },
+
+  {
+    word: "BALISIER",
+    hint: "Cultural Item",
+    emoji: "🌺",
+    sentence:
+      "The ___ flower is the symbol of the PNM political party in Trinidad and Tobago.",
+  },
+
+  {
+    word: "COCOA POD",
+    hint: "Cultural Item",
+    emoji: "🍫",
+    sentence:
+      "She break open the ___ ___ and suck the sweet white pulp right off the seed.",
+  },
+
+  // ── More National Symbols ──────────────────────────────────────────────────
+  {
+    word: "SCARLET IBIS",
+    hint: "National Symbol",
+    emoji: "🦩",
+    sentence:
+      "Hundreds of ___ ___ does come to roost in the Caroni swamp at sunset in a blaze of red.",
+  },
+
+  {
+    word: "LEATHERBACK",
+    hint: "National Symbol",
+    emoji: "🐢",
+    sentence:
+      "The ___ turtle comes ashore on the beaches of Trinidad every year to lay her eggs in the sand.",
+  },
+
+  {
+    word: "TRINITY CROSS",
+    hint: "National Symbol",
+    emoji: "✝️",
+    sentence:
+      "The ___ ___ was the highest national award in Trinidad and Tobago for many decades.",
+  },
+
+  {
+    word: "COAT OF ARMS",
+    hint: "National Symbol",
+    emoji: "🛡️",
+    sentence:
+      "The ___ ___ ___ of Trinidad and Tobago features two hummingbirds and three ships.",
+  },
+
+  {
+    word: "NATIONAL ANTHEM",
+    hint: "National Symbol",
+    emoji: "🎵",
+    sentence:
+      "The whole crowd stood up and sang the ___ ___ with pride before the cricket match started.",
+  },
+
+  // ── More Tobago Food ───────────────────────────────────────────────────────
+  {
+    word: "CURRY CRAB",
+    hint: "Tobago Food",
+    emoji: "🦀",
+    sentence:
+      "She make a pot of ___ ___ with coconut milk that had everybody licking their fingers.",
+  },
+
+  {
+    word: "CRAB BACKS",
+    hint: "Tobago Food",
+    emoji: "🦀",
+    sentence:
+      "The restaurant serve ___ ___ stuffed with seasoned crabmeat as a starter on the menu.",
+  },
+
+  {
+    word: "STEWED FISH",
+    hint: "Tobago Food",
+    emoji: "🐟",
+    sentence:
+      "The ___ ___ in coconut milk with provision is a classic Tobago Sunday morning breakfast.",
+  },
+
+  {
+    word: "BLUE FOOD",
+    hint: "Tobago Food",
+    emoji: "💙",
+    sentence:
+      "In Tobago they does call dasheen and other ground provisions ___ ___ at Sunday lunch.",
+  },
+
+  // ── More Trini Food ────────────────────────────────────────────────────────
+  {
+    word: "SHADOW BENI",
+    hint: "Trini Food",
+    emoji: "🌿",
+    sentence:
+      "She chop up fresh ___ ___ and add it to the pepper sauce to give it that real Trini flavour.",
+  },
+
+  {
+    word: "CHADON BENI",
+    hint: "Trini Food",
+    emoji: "🌿",
+    sentence:
+      "Without fresh ___ ___ the seasoning green just does not taste the same at all.",
+  },
+
+  {
+    word: "SADA ROTI",
+    hint: "Trini Food",
+    emoji: "🫓",
+    sentence:
+      "She bake ___ ___ on the tawa and serve it hot with choka and fried ochro.",
+  },
+
+  {
+    word: "DHAL PURI",
+    hint: "Trini Food",
+    emoji: "🫔",
+    sentence:
+      "The ___ ___ from that little shop in Debe is considered the best in all of south Trinidad.",
+  },
+
+  {
+    word: "SALARA",
+    hint: "Trini Food",
+    emoji: "🌀",
+    sentence:
+      "She cut a thick slice of the red coconut ___ and pour a cup of cocoa tea to go with it.",
+  },
+
+  {
+    word: "PINE TART",
+    hint: "Trini Food",
+    emoji: "🥧",
+    sentence:
+      "The bakery on the corner does sell fresh ___ ___ every morning while they still warm.",
+  },
+
+  {
+    word: "CASSAVA PONE",
+    hint: "Trini Food",
+    emoji: "🍮",
+    sentence:
+      "Granny grate the cassava fine and bake a ___ ___ that smell up the whole house.",
+  },
+
+  {
+    word: "COCONUT BAKE",
+    hint: "Trini Food",
+    emoji: "🥥",
+    sentence:
+      "The ___ ___ from the lady in Maracas was fluffy and tasted of real fresh coconut inside.",
+  },
+
+  {
+    word: "FARINE",
+    hint: "Trini Food",
+    emoji: "🌾",
+    sentence:
+      "She cook the ___ with coconut milk and sugar for a simple but satisfying breakfast.",
+  },
+
+  {
+    word: "CURRANTS ROLL",
+    hint: "Trini Food",
+    emoji: "🌀",
+    sentence:
+      "The children always ask for a ___ ___ from the bakery after school on a Friday afternoon.",
+  },
+
+  // ── More Trini Drinks ──────────────────────────────────────────────────────
+  {
+    word: "PEANUT PUNCH",
+    hint: "Trini Drink",
+    emoji: "🥜",
+    sentence:
+      "He buy a cold ___ ___ from the man by the market and drink it down in one go.",
+  },
+
+  {
+    word: "CREAM SODA",
+    hint: "Trini Drink",
+    emoji: "🥤",
+    sentence:
+      "At every Trini birthday party growing up there was always a bottle of ___ ___ on the table.",
+  },
+
+  {
+    word: "SOLO",
+    hint: "Trini Drink",
+    emoji: "🧃",
+    sentence:
+      "He grab a cold ___ from the parlour to wash down his doubles on the way to work.",
+  },
+
+  {
+    word: "COCOA TEA",
+    hint: "Trini Drink",
+    emoji: "☕",
+    sentence:
+      "Nothing warms you up on a cool morning in the hills like a hot cup of ___ ___.",
+  },
+
+  // ── More Trini Slang ───────────────────────────────────────────────────────
+  {
+    word: "WAJANG",
+    hint: "Trini Slang",
+    emoji: "😤",
+    sentence:
+      "He behave like a real ___ at the party — loud, rude and making a scene in front everybody.",
+  },
+
+  {
+    word: "BAMSEE",
+    hint: "Trini Slang",
+    emoji: "🍑",
+    sentence:
+      "She fall flat on she ___ when she slip on the wet floor coming out the fete.",
+  },
+
+  {
+    word: "BUCK",
+    hint: "Trini Slang",
+    emoji: "👺",
+    sentence:
+      "She say somebody must have a ___ working for them because everything always going their way.",
+  },
+
+  {
+    word: "PARANG LIME",
+    hint: "Trini Slang",
+    emoji: "🎸",
+    sentence:
+      "Every December the family does have a ___ ___ where they sing and eat pastelles all night.",
+  },
+
+  // ── More Trinidad Locations ────────────────────────────────────────────────
+  {
+    word: "CHAGUARAMAS",
+    hint: "Trinidad Location",
+    emoji: "⚓",
+    sentence:
+      "They went to ___ for the long weekend to rent a boat and lime on the water.",
+  },
+
+  {
+    word: "CARONI SWAMP",
+    hint: "Trinidad Location",
+    emoji: "🦩",
+    sentence:
+      "Every evening at sunset people take the boat tour through the ___ ___ to see the scarlet ibis come home.",
+  },
+
+  {
+    word: "MANZANILLA",
+    hint: "Trinidad Location",
+    emoji: "🏖️",
+    sentence:
+      "The long coconut-lined beach at ___ stretches for miles along the quiet east coast.",
+  },
+
+  {
+    word: "DEBE",
+    hint: "Trinidad Location",
+    emoji: "🫔",
+    sentence:
+      "People drive from all over Trinidad to ___ just to eat the best dhal puri on the island.",
+  },
+
+  {
+    word: "TUNAPUNA",
+    hint: "Trinidad Location",
+    emoji: "📍",
+    sentence:
+      "___ is a busy town in the east-west corridor known for its market and strong community vibe.",
+  },
+
+  {
+    word: "CUREPE",
+    hint: "Trinidad Location",
+    emoji: "📍",
+    sentence:
+      "The busy junction at ___ is one of the most recognised intersections in all of Trinidad.",
+  },
+
+  {
+    word: "SANTA CRUZ",
+    hint: "Trinidad Location",
+    emoji: "🌿",
+    sentence:
+      "The drive through ___ ___ valley is one of the most scenic and peaceful routes in Trinidad.",
+  },
+
+  {
+    word: "DIEGO MARTIN",
+    hint: "Trinidad Location",
+    emoji: "📍",
+    sentence:
+      "___ ___ is a residential area in northwest Trinidad nestled between the hills and the sea.",
+  },
+
+  {
+    word: "CARAPICHAIMA",
+    hint: "Trinidad Location",
+    emoji: "📍",
+    sentence:
+      "The Temple in the Sea near ___ was built by a determined man who carried stones into the water.",
+  },
+
+  {
+    word: "NARIVA SWAMP",
+    hint: "Trinidad Location",
+    emoji: "🌿",
+    sentence:
+      "The ___ ___ on the east coast of Trinidad is home to anacondas, manatees and rare birds.",
   },
 ];
 
